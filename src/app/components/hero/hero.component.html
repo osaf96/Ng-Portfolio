@@ -1,0 +1,44 @@
+<div class="hero flex flex-col justify-center items-center h-screen mb-4">
+  <img
+    src="../../../assets/imgs/undraw_coding_re_iv62.svg"
+    alt=""
+    srcset=""
+    class="block w-[220px] mb-2 rounded-full"
+  />
+
+  <p class="text-slate-500 text-center text-2xl cursor-pointer mt-2">
+    Hello, I'm
+    <span class="name block text-6xl font-bold text-slate-600">Osaf Ali</span>
+    <span class="dev block text-3xl font-semibold">Software Engineer</span>
+  </p>
+  <!-- new buttons// -->
+  <div class="flex space-x-4">
+    <a
+      href="https://docs.google.com/document/d/1W-GOccLIBhE6QtGcACQH787OGRONca-PwvR4i1fBHfU/edit?usp=drive_link"
+      class="bg-[#086E83] opacity-90 hover:opacity-100 text-white font-bold py-2 px-4 rounded"
+      target="_blank"
+    >
+      Resume
+    </a>
+    <a
+      href="https://github.com/osaf96"
+      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+      target="_blank"
+    >
+      Github
+    </a>
+  </div>
+</div>
+
+<div
+  class="flex flex-col justify-center items-center transition ease-in-out delay-150 cursor-pointer hover:scale-110 mt-[-120px]"
+>
+  <button
+    class="border rounded-lg p-2 text-slate-500 mb-2 text-sm"
+    (click)="scrollDown()"
+  >
+    scroll down
+  </button>
+  <mat-icon class="text-slate-500 mb-2">south</mat-icon>
+</div>
+<div class="vertical-line"></div>

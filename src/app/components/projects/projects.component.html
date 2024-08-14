@@ -1,0 +1,25 @@
+<div
+  class="projects flex flex-col justify-center items-center h-screen p-5 mt-10"
+>
+  <p class="font-sans text-sm font-medium text-slate-400">Browse My Recent</p>
+  <p
+    class="text-4xl font-extrabold text-slate-600 mb-10 mt-10 title hover:opacity-70 hover:cursor-pointer transition ease-in-out delay-150 cursor-pointer hover:scale-110"
+  >
+    Projects
+  </p>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 w-full max-w-screen-xl mx-auto grid-container"
+  >
+    @for(project of projects;track project){
+    <ng-container>
+      <app-card
+        [imgSrc]="project.imgSrc"
+        [projectTitle]="project.projectTitle"
+        [projectDescription]="project.projectDescription"
+        [tags]="project.tags"
+        [liveUrl]="project.liveUrl"
+      ></app-card>
+    </ng-container>
+    }
+  </div>
+</div>

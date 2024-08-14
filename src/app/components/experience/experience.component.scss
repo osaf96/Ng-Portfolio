@@ -1,0 +1,61 @@
+.experience-container {
+  height: auto;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem; /* Spacing between timeline items */
+}
+
+.timeline-item .icon {
+  flex-shrink: 0;
+}
+
+.timeline-item .details {
+  flex-grow: 1;
+  margin-left: 16px; /* Adjusted for proper spacing */
+}
+
+// @media screen and (min-width: 781px) {
+// .timeline-item {
+//   flex-direction: row; /* Align items in a row for larger screens */
+// }
+// }
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1190aa; /* Tailwind's blue-700 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Ensure the circle doesn't shrink */
+}
+
+.icon span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 270px) and (max-width: 641px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1190aa; /* Tailwind's blue-700 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Ensure the circle doesn't shrink */
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}

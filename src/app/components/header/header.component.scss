@@ -1,0 +1,40 @@
+.menu-icon {
+  display: none; // Hide menu icon by default
+}
+
+@media screen and (max-width: 770px) {
+  .logo {
+    display: flex;
+    justify-content: start;
+    font-size: 22px;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center; // Show menu icon in mobile view
+  }
+
+  .dropdown-menu {
+    display: none; // Hide dropdown menu by default
+    position: absolute;
+    top: 100%; // Positioned below the menu icon
+    right: 0; // Align with the right edge of the menu bar
+    background: white; // Background color
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow effect
+    border-radius: 8px; // Rounded corners
+    z-index: 10; // Ensure the dropdown is above other content
+    min-width: 200px; // Minimum width
+    margin-top: 8px; // Space between the dropdown and the menu icon
+    padding: 10px; // Padding inside the dropdown
+  }
+
+  .dropdown-menu.block {
+    display: flex;
+    align-items: baseline; // Show dropdown menu when menuOpen is true
+  }
+
+  .nav-items {
+    flex-direction: column;
+    margin: 0; // Stack items vertically in mobile view
+  }
+}

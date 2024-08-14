@@ -1,0 +1,47 @@
+<nav
+  class="flex justify-between items-center p-2 border-b border-slate-300 relative"
+>
+  <span class="logo text-2xl font-bold text-slate-600 cursor-pointer">
+    OSAF ALI
+  </span>
+
+  <mat-icon
+    class="menu-icon text-3xl cursor-pointer md:hidden"
+    (click)="toggleMenu()"
+  >
+    menu
+  </mat-icon>
+
+  <ul
+    [ngClass]="{
+      'dropdown-menu': true,
+      block: menuOpen,
+      hidden: !menuOpen
+    }"
+    class="nav-items flex-col md:flex-row md:flex space-x-9 text-xl p-1 text-slate-600 opacity-100 hidden md:flex"
+  >
+    <li class="p-2">
+      <a href="#" class="hover:opacity-70" (click)="scrollToSection('about')">
+        About
+      </a>
+    </li>
+    <li class="p-2">
+      <a
+        href="#"
+        class="hover:opacity-70"
+        (click)="scrollToSection('experience')"
+      >
+        Experience
+      </a>
+    </li>
+    <li class="p-2">
+      <a
+        href="#"
+        class="hover:opacity-70"
+        (click)="scrollToSection('projects')"
+      >
+        Projects
+      </a>
+    </li>
+  </ul>
+</nav>

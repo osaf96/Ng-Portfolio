@@ -1,0 +1,73 @@
+.hero {
+  background-image: url("../../../assets/imgs/mk8.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: starsAnimation 60s linear infinite;
+}
+
+.vertical-line {
+  width: 4px; /* Starting width of the line */
+  height: 400px; /* Height of the line */
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.vertical-line::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: calc(
+    50% - 10px
+  ); /* Adjust this value to horizontally center the ball */
+  width: 20px; /* Diameter of the ball */
+  height: 20px; /* Diameter of the ball */
+  background-color: black; /* Color of the ball */
+  border-radius: 50%; /* Makes the shape circular */
+}
+
+.vertical-line::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 10px);
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  transform: translateX(-50%);
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    75% 100%,
+    25% 100%,
+    0 0
+  ); /* Creates a trapezoid shape */
+}
+
+@keyframes starsAnimation {
+  0% {
+    background-position: center 0;
+  }
+  100% {
+    background-position: center -100vh;
+  }
+}
+
+@media screen and (min-width: 270px) and (max-width: 641px) {
+  .hero {
+    p {
+      font-size: 16px;
+      .name {
+        font-size: 32px;
+      }
+      .dev {
+        font-size: 26px;
+      }
+    }
+  }
+}
