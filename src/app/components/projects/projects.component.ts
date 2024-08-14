@@ -28,7 +28,7 @@ export class ProjectsComponent {
     },
 
     {
-      imgSrc: "assets/imgs/new-portfolio.png",
+      imgSrc: "assets/imgs/image.png",
       projectTitle: "New Portfolio",
       projectDescription: `I created a new portfolio project using Angular, TypeScript, and SCSS, incorporating Tailwind CSS for streamlined styling. This project showcases my skills in modern frontend development practices and features a responsive design for an enhanced user experience.`,
       tags: ["Angular", "TS", "CSS", "tailwindcss"],
